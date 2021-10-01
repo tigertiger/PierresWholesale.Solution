@@ -14,13 +14,14 @@ namespace PierresWholesale.Tests
       Vendor.ClearAll();
     }
 
+    //1
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
       Vendor newVendor = new Vendor("Sarah's Bad Bakery", "Sells Half-Buns and Orts");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
-
+    //2
     [TestMethod]
     public void GetNameNDetails_ReturnsNameNDetails_StringString()
     {
@@ -34,7 +35,7 @@ namespace PierresWholesale.Tests
       Assert.AreEqual(name, nameResult);
       Assert.AreEqual(details, detailsResult);
     }
-
+    //3
     [TestMethod]
     public void GetId_VendorsInstantiateWithIdGetReturnsId_Int()
     {
@@ -46,6 +47,23 @@ namespace PierresWholesale.Tests
 
       Assert.AreEqual(1, result);
     }
+    //4
+    [TestMethod]
+    public void ChangeNameNDetails_ChangeNameNDetails_StringString()
+    {
+      string name = "Sarah's Rotten Bunnery";
+      string details = "Not a whole bun in the lot";
+      Vendor newVendor = new Vendor(name, details);
 
+      string updatedName = "Sarah's Better Bunnery";
+      string updatedDetails = "Rebrand fairly unsuccessful";
+      newVendor.Name = updatedName;
+      newVendor.Details = updatedDetails;
+      string nameResult = newVendor.Name;
+      string detailsResult = newVendor.Details;
+
+      Assert.AreEqual(updatedName, nameResult);
+      Assert.AreEqual(updatedDetails, detailsResult);
+    }
   }
 }
