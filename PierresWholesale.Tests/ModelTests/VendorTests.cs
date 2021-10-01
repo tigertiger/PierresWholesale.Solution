@@ -56,7 +56,7 @@ namespace PierresWholesale.Tests
       Vendor newVendor = new Vendor(name, details);
 
       string updatedName = "Sarah's Better Bunnery";
-      string updatedDetails = "Rebrand fairly unsuccessful";
+      string updatedDetails = "Rebrand fairly unsuccessful. Buns still rotten.";
       newVendor.Name = updatedName;
       newVendor.Details = updatedDetails;
       string nameResult = newVendor.Name;
@@ -64,6 +64,17 @@ namespace PierresWholesale.Tests
 
       Assert.AreEqual(updatedName, nameResult);
       Assert.AreEqual(updatedDetails, detailsResult);
+    }
+
+    //5
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_VendorList()
+    {
+      List<Vendor> newVendorList = new List<Vendor> {};
+
+      List<Vendor> result = Vendor.GetAll();
+
+      CollectionAssert.AreEqual(newVendorList, result);
     }
   }
 }

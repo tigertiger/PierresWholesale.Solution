@@ -20,5 +20,10 @@ namespace PierresWholesale.Models
     {
       _customers.Clear();
     }
+
+    public static List<Vendor> GetAll()
+    {
+      return _customers;
+    }
   }
 }
