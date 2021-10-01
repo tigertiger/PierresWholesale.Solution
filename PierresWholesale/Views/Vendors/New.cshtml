@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @using PierresWholesale.Models;
+  <title>Pierre's Vendor Tracker</title>
+</head>
+<body>
+  <div class="container">
+    <div class="intro">
+      <h3>Ajouter un Vendeur</h3>
+      <p>More bread, more cheese 🧀.🥖</p>
+    </div>
+    <div class="pierreForm">
+      <form action="/vendors" method="post">
+        <label for="vendorName">Vendor's Name</label>
+        <input id="vendorName" name="vendorName" type="text">
+        <label for="vendorDetails">Details</label>
+        <input id="vendorDetails" name="vendorDetails" type="text">
+        <button type="submit">Add</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
