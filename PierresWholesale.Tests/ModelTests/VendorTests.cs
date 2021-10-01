@@ -14,5 +14,14 @@ namespace PierresWholesale.Tests
       Vendor newVendor = new Vendor("Sarah's Bad Bakery", "Sells Half-Buns and Orts");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
+
+    [TestMethod]
+    public void GetNameNDetails_ReturnsNameNDetails_StringString()
+    {
+      string name = "Sarah's Rotten Bunnery";
+      string details = "Not a whole bun in the lot";
+      Vendor newVendor = new Vendor(name, details);
+    }
+
   }
 }
