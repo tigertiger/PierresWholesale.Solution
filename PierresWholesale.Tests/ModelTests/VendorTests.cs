@@ -109,5 +109,25 @@ namespace PierresWholesale.Tests
 
       Assert.AreEqual(newVendor2, result);
     }
+
+    //15
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      string orderName = "Ratloaves";
+      string orderDetails = "1000 rat-eaten loaves";
+      int orderPrice = 100;
+      string orderDate = "10/30/2021";
+      Order newOrder = new Order(orderName, orderDetails, orderPrice, orderDate);
+      List<Order> newList = new List<Order> {newOrder};
+      string name = "Sarah's Rotten Bunnery";
+      string details = "Not a whole bun in the lot";
+      Vendor newVendor = new Vendor(name, details);
+      newVendor.AddOrder(newOrder);
+
+      List<Order> result = newVendor.Orders;
+
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }

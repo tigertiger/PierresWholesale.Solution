@@ -7,6 +7,7 @@ namespace PierresWholesale.Models
     public string Details { get; set; }
     public int Id { get; }
     private static List<Vendor> _customers = new List<Vendor> {};
+    public List<Order> Orders { get; set; }
 
     public Vendor (string name, string details)
     {
@@ -14,6 +15,7 @@ namespace PierresWholesale.Models
       Details = details;
       _customers.Add(this);
       Id = _customers.Count;
+      Orders = new List<Order>{};
     }
 
     public static void ClearAll()
@@ -29,6 +31,11 @@ namespace PierresWholesale.Models
     public static Vendor Find(int searchId)
     {
       return _customers[searchId-1];
+    }
+
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
     }
   }
 }
