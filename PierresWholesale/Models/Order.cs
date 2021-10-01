@@ -29,5 +29,10 @@ namespace PierresWholesale.Models
     {
       return _orderTracker[searchId -1];
     }
+
+    public static List<Order> GetAll()
+    {
+      return _orderTracker;
+    }
   }
 }

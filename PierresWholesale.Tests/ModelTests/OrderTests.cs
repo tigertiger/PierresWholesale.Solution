@@ -110,5 +110,16 @@ namespace PierresWholesale.Tests
       Assert.AreEqual(newOrder2, result);
     }
 
+    //13
+    [TestMethod]
+    public void GetAll_ReturnsEmptyOrderList_OrderList()
+    {
+      List<Order> newOrderList = new List<Order> {};
+
+      List<Order> result = Order.GetAll();
+
+      CollectionAssert.AreEqual(newOrderList, result);
+    }
+
   }
 }
