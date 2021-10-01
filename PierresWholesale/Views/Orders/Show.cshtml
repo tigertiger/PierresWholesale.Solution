@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @using PierresWholesale.Models;
+  <title>Pierre's Vendor Tracker</title>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h4>Order Details</h4>
+      <ul>
+        <h5>Vendor: @Model["vendor"].Name</h5>
+        <li>@Model["order"].OrderName</li>
+        <li>@Model["order"].OrderDetails</li>
+        <li>@Model["order"].OrderPrice</li>
+        <li>@Model["order"].OrderDate</li>
+      </ul>
+    </div>
+    <a href='/vendors/@Model["vendor"].Id/orders/new'>Add an Order</a>
+    <a href='/vendors'>Back to Vendors</a>
+  </div>
+</body>
+</html>
