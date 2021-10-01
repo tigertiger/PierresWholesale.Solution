@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @using PierresWholesale.Models;
+  <title>Pierre's Vendor Tracker</title>
+</head>
+<body>
+  <div class="container">
+    <div class="intro">
+      <h3>Vos Vendeurs</h3>
+      <p>They're not great, but they're yours</p>
+    </div>
+    <h4>Vendor Orders</h4>
+    <ul>
+        <p>Hullo</p>
+      @foreach (Order order in @Model["orders"])
+      {
+        <li><a href="/vendors/@Model["vendor"].Id/orders/@order.Id">@order.OrderName</a></li>
+      }
+    </ul>
+
+    <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add an Order</a></p>
+    <p><a href='/vendors'>Return to Vendor List</a></p>
+  </div>
+</body>
+</html>
