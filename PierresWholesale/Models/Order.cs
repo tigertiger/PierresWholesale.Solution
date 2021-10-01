@@ -24,5 +24,10 @@ namespace PierresWholesale.Models
     {
       _orderTracker.Clear();
     }
+
+    public static Order Find(int searchId)
+    {
+      return _orderTracker[searchId -1];
+    }
   }
 }
