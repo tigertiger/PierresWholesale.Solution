@@ -2,7 +2,9 @@
 <html>
 <head>
   @using PierresWholesale.Models;
-  <title>Pierre's Vendor Tracker</title>
+  @{
+  Layout = "_Layout";
+  }
 </head>
 <body>
   <div class="container">
@@ -15,7 +17,9 @@
         <p>Hullo</p>
       @foreach (Order order in @Model["orders"])
       {
-        <li><a href="/vendors/@Model["vendor"].Id/orders/@order.Id">@order.OrderName</a></li>
+        <li>
+          <a href="/vendors/@Model["vendor"].Id/orders/@order.Id">@order.OrderName</a>
+        </li>
       }
     </ul>
 

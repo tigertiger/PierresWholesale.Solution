@@ -7,6 +7,7 @@ namespace PierresWholesale.Models
     public string OrderDetails { get; set; }
     public int OrderPrice { get; set; }
     public string OrderDate { get; set; }
+    public bool OrderPaid { get; set; }
     public int Id { get; }
     private static List<Order> _orderTracker = new List<Order> {};
 
@@ -16,6 +17,7 @@ namespace PierresWholesale.Models
       OrderDetails = orderDetails;
       OrderPrice = orderPrice;
       OrderDate = orderDate;
+      OrderPaid = false;
       _orderTracker.Add(this);
       Id = _orderTracker.Count;
     }
@@ -34,5 +36,16 @@ namespace PierresWholesale.Models
     {
       return _orderTracker;
     }
+
+    public static void DeleteOrder(int id)
+    {
+      _orderTracker.RemoveAt(id -1);
+    }
+
+    // public bool MarkPaid(Order order)
+    // {
+    //   order.OrderPaid = true;
+    //   return true;
+    // }
   }
 }
