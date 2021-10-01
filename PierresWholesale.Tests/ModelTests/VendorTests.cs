@@ -93,5 +93,21 @@ namespace PierresWholesale.Tests
 
       CollectionAssert.AreEqual(newVendorList, result);
     }
+
+    //7
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      string name1 = "The Miche Quiche";
+      string details1 = "Doesn't sell quiche";
+      string name2 = "Orts 'n' Things";
+      string details2 = "Sells orts 'n' things";
+      Vendor newVendor1 = new Vendor(name1, details1);
+      Vendor newVendor2 = new Vendor(name2, details2);
+
+      Vendor result = Vendor.Find(2);
+
+      Assert.AreEqual(newVendor2, result);
+    }
   }
 }

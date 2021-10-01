@@ -25,5 +25,10 @@ namespace PierresWholesale.Models
     {
       return _customers;
     }
+
+    public static Vendor Find(int searchId)
+    {
+      return _customers[searchId-1];
+    }
   }
 }
