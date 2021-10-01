@@ -8,24 +8,30 @@
 </head>
 <body>
   <div class="container">
-    <div class="intro">
-      <h3>Vos Vendeurs</h3>
-      <p>They're not great, but they're yours</p>
-    </div>
-    <div class="menu">
-      <h4>Qu'est-ce que vous voulez faire?</h4>
-      <a href="/vendors/new"><button>Add a Vendor</button></a>
-      <p>View Vendor Details</p>
-      @if (@Model.Count == 0)
-      {
-        <p>You don't have any vendors, yet. 😢</p>
-      }
-      @foreach (Vendor vendor in Model)
-      {
-        <ul>
-          <li>🌟 <a href="/vendors/@vendor.Id">@vendor.Name</a></li>
-        </ul>
-      }
+    <div class="bgCo">
+      <div class="intro">
+        <h3>Vos Vendeurs</h3>
+        <p>They're not great, but they're yours</p>
+      </div>
+      <div class="menu">
+        <h4>Qu'est-ce que vous voulez faire?</h4>
+        <div class="col">
+          <button id="notAButton">View Vendor Details</button>
+          @if (@Model.Count == 0)
+          {
+            <p>You don't have any vendors, yet. 😢</p>
+          }
+          @foreach (Vendor vendor in Model)
+          {
+            <ul>
+              <li>🌟 <a href="/vendors/@vendor.Id">@vendor.Name</a></li>
+            </ul>
+          }
+        </div>
+        <div class="col">
+          <a href="/vendors/new"><button>Add a Vendor</button></a>
+        </div>
+      </div>
     </div>
   </div>
 </body>

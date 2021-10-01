@@ -8,23 +8,25 @@
 </head>
 <body>
   <div class="container">
-    <div class="intro">
-      <h3>Ajouter une Commande</h3>
-      <p>More cheddar, more rats 🧀.🐀</p>
-    </div>
-    <div class="pierreForm">
-      <form action="/vendors/@Model.Id/orders" method="post">
-        <input type="hidden" id="vendorId" name="vendorId" value="@Model.Id">
-        <label for="orderName">Order Name</label>
-        <input id="orderName" name="orderName" type="text">
-        <label for="orderDetails">Details</label>
-        <input id="orderDetails" name="orderDetails" type="text">
-        <label for="orderPrice">Total Cost</label>
-        <input id="orderPrice" name="orderPrice" type="number">
-        <label for="orderDate">Date of Order</label>
-        <input id="orderDate" name="orderDate" type="text">
-        <button type="submit">Add</button>
-      </form>
+    <div class="bgCo">
+      <div class="intro">
+        <h3>Ajouter une Commande</h3>
+        <p>More cheddar, more rats 🧀.🐀</p>
+      </div>
+      <div class="menu">
+        <form action="/vendors/@Model.Id/orders" method="post">
+          <input type="hidden" id="vendorId" name="vendorId" value="@Model.Id">
+          <label for="orderName">Order Name</label>
+          <input id="orderName" name="orderName" type="text">
+          <label for="orderDetails">Details</label>
+          <input id="orderDetails" name="orderDetails" type="text">
+          <label for="orderPrice">Total Cost</label>
+          <input id="orderPrice" name="orderPrice" type="number">
+          <label for="orderDate">Date of Order</label>
+          <input id="orderDate" name="orderDate" type="text">
+          <button type="submit">Add</button>
+          </form>
+      </div>
     </div>
   </div>
 </body>
