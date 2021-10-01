@@ -6,8 +6,14 @@ using System;
 namespace PierresWholesale.Tests
 {
   [TestClass]
-  public class OrderTests
+  public class OrderTests : IDisposable
   {
+
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
+
     //8
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
@@ -67,5 +73,22 @@ namespace PierresWholesale.Tests
       Assert.AreEqual(updatedPrice, priceResult);
       Assert.AreEqual(updatedDate, dateResult);
     }
+
+    //11
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithIdGetReturns_Int()
+    {
+      string orderName = "Sunday Bunday";
+      string orderDetails = "300 half-buns";
+      int orderPrice = 450;
+      string orderDate = "10/2/2021";
+      Order newOrder = new Order(orderName, orderDetails, orderPrice, orderDate);
+
+      int result = newOrder.Id;
+
+      Assert.AreEqual(1, result);
+    }
+
+
   }
 }

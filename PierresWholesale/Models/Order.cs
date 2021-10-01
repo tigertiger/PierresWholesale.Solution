@@ -19,5 +19,10 @@ namespace PierresWholesale.Models
       _orderTracker.Add(this);
       Id = _orderTracker.Count;
     }
+
+    public static void ClearAll()
+    {
+      _orderTracker.Clear();
+    }
   }
 }
