@@ -6,8 +6,14 @@ using System;
 namespace PierresWholesale.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests : IDisposable
   {
+
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
@@ -21,6 +27,24 @@ namespace PierresWholesale.Tests
       string name = "Sarah's Rotten Bunnery";
       string details = "Not a whole bun in the lot";
       Vendor newVendor = new Vendor(name, details);
+
+      string nameResult = newVendor.Name;
+      string detailsResult = newVendor.Details;
+
+      Assert.AreEqual(name, nameResult);
+      Assert.AreEqual(details, detailsResult);
+    }
+
+    [TestMethod]
+    public void GetId_VendorsInstantiateWithIdGetReturnsId_Int()
+    {
+      string name = "Bunsville";
+      string details = "Manager Miche is a jerk";
+      Vendor newVendor = new Vendor(name, details);
+
+      int result = newVendor.Id;
+
+      Assert.AreEqual(1, result);
     }
 
   }
