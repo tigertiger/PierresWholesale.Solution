@@ -41,11 +41,6 @@ namespace PierresWholesale.Models
     {
       _orderTracker.RemoveAt(id -1);
     }
-
-    // public bool MarkPaid(Order order)
-    // {
-    //   order.OrderPaid = true;
-    //   return true;
-    // }
+    
   }
 }

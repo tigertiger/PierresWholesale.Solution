@@ -13,7 +13,9 @@
 
 ## Description
 
-_Remember those stale crubs and loaves? Now they're all over town._
+_Remember those stale crubs and loaves? Now they're all over town._  
+_This C#-based web application allows users to pretend to be a bread mogule. Add vendors to your customer roster, decide what they need to order. Hours of fun!_  
+_After setup [detailed below], simply click around in the web interface to enjoy your time as Pierre, King of Bread [ou le roi du pain, s'il vous plait]._
 
 ## Instructions
 
@@ -24,24 +26,27 @@ _Remember those stale crubs and loaves? Now they're all over town._
 
 ### Setup/Installation
 
+* Clone [this repository](https://github.com/tigertiger/PierresWholesale.Solution) to an empty folder or to your desktop, or download and open the Zip on your local machine  
+    Instructions for cloning can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository).
+* Open the PierresWholesale.Solution folder in your preferred text editor
+* Testing:
+  - Navigate to the PierresWholesale.Solution/PierresWholesale.Tests folder in the command line or terminal   
+    -- Run ```dotnet restore``` to restore the test project dependencies  
+  - From PierresWholesale.Solution/PierresWholesale.Tests, run ```dotnet test```
+  - Write tests and test them to your heart's content
 * Restore and build the project:
   - Navigate to the PierresWholesale.Solution/PierresWholesale folder in the command line or terminal 
-    -- Run the command ```dotnet restore``` to restore the project dependencies
-    -- Run the command ```dotnet build``` to build and compile the project
-  - Navigate to the PierresWholesale.Solution/PierresWholesale.Tests folder in the command line or terminal 
-    -- Run the command ```dotnet restore``` to restore the test project dependencies
-    -- Run the command ```dotnet build``` to build and compile the test project
-* Testing:
-  - You must restore and build the project first, as outlined previously in these instructions.
-  - In the terminal (navigated to the PierresWholesale.Solution/PierresWholesale.Tests folder) run the command ```dotnet test```
-* Run Console App:
+    -- Run ```dotnet restore``` to restore the project dependencies
+    -- Run ```dotnet build``` to build and compile the project
+* Run the Web App:
   - Navigate to the PierresWholesale.Solution/PierresWholesale folder in the terminal
-  - Run the command ```dotnet run``` 
-  - The application will run in the console
+  - Run ```dotnet run``` 
+  - If you would like to be able to continue viewing the site while making changes to its content, instead run ```dotnet watch run```
+  - Access http://localhost:5000/ in your browser to view & interact with the web app
 
 ## Known Bugs
 
-* _None yet_
+* _No known bugs_
 
 ## License
 

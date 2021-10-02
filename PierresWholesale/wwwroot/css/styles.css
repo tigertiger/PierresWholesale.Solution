@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&family=Ubuntu+Condensed&family=Yanone+Kaffeesatz:wght@200&display=swap&family=Antic+Slab&display=swap');
 
 body {
-background: url("/../../img/leiliane-fagundes-0sTX2h8FpXk-unsplash.jpeg")no-repeat center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-color:rgb(255, 243, 217);
-font-family: 'Ubuntu Condensed', sans-serif;
+  background: url("/../../img/leiliane-fagundes-0sTX2h8FpXk-unsplash.jpeg")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color:rgb(255, 243, 217);
+  font-family: 'Ubuntu Condensed', sans-serif;
 
 }
 
@@ -35,13 +35,13 @@ a:hover {
 }
 
 .menu {
-padding:30px 0 0 50px;
+  padding:30px 0 0 50px;
 }
 
 form label {
-text-transform: lowercase;
-letter-spacing: .2rem;
-padding: 0 10px 0 0;
+  text-transform: lowercase;
+  letter-spacing: .2rem;
+  padding: 0 10px 0 0;
 }
 
 form {
@@ -50,12 +50,21 @@ form {
   left:14%;
 }
 
+#vendorList {
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+
+#newOrder {
+  padding: 0 0 20px 0;
+}
+
 button {
-text-transform:lowercase;
-font-family:'Antic Slab', serif;
-letter-spacing: .3rem;
-font-size:9pt;
-padding:2px 10px;
+  text-transform:lowercase;
+  font-family:'Antic Slab', serif;
+  letter-spacing: .3rem;
+  font-size:9pt;
+  padding:2px 10px;
 }
 
 button:hover {
@@ -136,7 +145,7 @@ div#footerContent {
 }
 
 .menu h4 {
-padding:0 0 30px 0;
+  padding:0 0 30px 0;
 }
 
 .col {
