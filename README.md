@@ -35,10 +35,10 @@ _After setup [detailed below], simply click around in the web interface to enjoy
   - From PierresWholesale.Solution/PierresWholesale.Tests, run ```dotnet test```
   - Write tests and test them to your heart's content
 * Restore and build the project:
-  - Navigate to the PierresWholesale.Solution/PierresWholesale folder in the command line or terminal 
-    -- Run ```dotnet restore``` to restore the project dependencies
+  - Navigate to the PierresWholesale.Solution/PierresWholesale folder in the command line or terminal  
+    -- Run ```dotnet restore``` to restore the project dependencies  
     -- Run ```dotnet build``` to build and compile the project
-* Run the Web App:
+* Use the Web App:
   - Navigate to the PierresWholesale.Solution/PierresWholesale folder in the terminal
   - Run ```dotnet run``` 
   - If you would like to be able to continue viewing the site while making changes to its content, instead run ```dotnet watch run```
